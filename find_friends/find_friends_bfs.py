@@ -1,4 +1,7 @@
 def find_friends(u1, u2, friends, max_depth):
+  """
+  Using BFS and keeping paths as nodes
+  """
   paths_to_check = [[u1]]
   while paths_to_check:
     curr_path = paths_to_check.pop()
@@ -11,6 +14,9 @@ def find_friends(u1, u2, friends, max_depth):
   return []
 
 def find_friends2(u1, u2, friends, max_depth):
+  """
+  Using BFS and keeping paths in a global dict
+  """
   nodes_to_visit = [u1]
   paths_to_node = {u1: []}
   while nodes_to_visit:
@@ -23,5 +29,4 @@ def find_friends2(u1, u2, friends, max_depth):
           paths_to_node[friend] = curr_path
           nodes_to_visit.append(friend)
   return []
-      
       
