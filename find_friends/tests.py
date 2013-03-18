@@ -1,7 +1,9 @@
 import unittest
 from unittest import TestCase
+from find_friends_dfs import find_friends as find_friends_dfs
 from find_friends_bfs import find_friends as find_friends_bfs
 from find_friends_bfs import find_friends2 as find_friends_bfs_with_dict
+from find_friends_bfs import find_friends3 as find_friends_bfs_lists
 from find_friends_set_intersection import find_friends as find_friends_sets
 
 class SimpleFriendGraph(TestCase):
@@ -17,8 +19,10 @@ class SimpleFriendGraph(TestCase):
     }
 
     self.algos_to_test = [
+      find_friends_dfs,
       find_friends_bfs,
       find_friends_bfs_with_dict,
+      find_friends_bfs_lists,
       find_friends_sets,
     ]
 
