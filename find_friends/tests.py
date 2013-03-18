@@ -1,5 +1,6 @@
 import unittest
 from unittest import TestCase
+from find_friends_dijkstra import find_friends as find_friends_dijkstra
 from find_friends_dfs import find_friends as find_friends_dfs
 from find_friends_bfs import find_friends as find_friends_bfs
 from find_friends_bfs import find_friends2 as find_friends_bfs_with_dict
@@ -24,6 +25,7 @@ class SimpleFriendGraph(TestCase):
       find_friends_bfs_with_dict,
       find_friends_bfs_lists,
       find_friends_sets,
+      find_friends_dijkstra,
     ]
 
   def test_self_friend(self):
